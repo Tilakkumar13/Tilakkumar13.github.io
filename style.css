@@ -6,29 +6,32 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     background: #f4f4f9;
     line-height: 1.6;
     padding: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Container */
-header, section, footer {
-    max-width: 800px;
+.container {
+    max-width: 900px;
     margin: auto;
     padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
 /* Header */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
 header h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
 }
 
 header p {
@@ -37,30 +40,47 @@ header p {
 
 /* Section Titles */
 h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #333;
-    border-bottom: 2px solid #3f72af;
+    margin-bottom: 15px;
     padding-bottom: 5px;
-    margin-bottom: 10px;
+    border-bottom: 2px solid #3f72af;
 }
 
-/* Lists */
-ul {
-    list-style: none;
-    padding-left: 0;
+/* Card Styling */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-ul li {
-    margin: 10px 0;
-    position: relative;
-    padding-left: 20px;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-ul li::before {
-    content: "•";
-    color: #3f72af;
-    position: absolute;
-    left: 0;
+/* Button Styling */
+button, .link-button {
+    background-color: #3f72af;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .link-button:hover {
+    background-color: #112d4e;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Footer */
@@ -68,19 +88,5 @@ footer {
     text-align: center;
     font-size: 0.9em;
     color: #777;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    header, section, footer {
-        padding: 15px;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
+    padding-top: 20px;
 }
